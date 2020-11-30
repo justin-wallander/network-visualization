@@ -4,7 +4,9 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import networkx as nx
-import plotly.graph_objs as go
+import plotly.express as px
+import plotly.graph_objects as go
+
 
 import pandas as pd
 from colour import Color
@@ -23,8 +25,8 @@ ACCOUNT="A0001"
 ##############################################################################################################################################################
 def network_graph(yearRange, AccountToSearch):
 
-    edge1 = pd.read_csv('edge1.csv')
-    node1 = pd.read_csv('node1.csv')
+    edge1 = pd.read_csv('network-visualization/edge1.csv')
+    node1 = pd.read_csv('network-visualization/node1.csv')
 
     # filter the record by datetime, to enable interactive control through the input box
     edge1['Datetime'] = "" # add empty Datetime column to edge1 dataframe
